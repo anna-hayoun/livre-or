@@ -1,0 +1,631 @@
+
+/************** ALL PAGES *************/
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    font-family: 'Quicksand', sans-serif, Arial, Helvetica, sans-serif;
+    background-image: url(../img/marb.jpg); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+
+/***** HEADER CONNEXION.PHP / INSCRIPTION.PHP *****/
+
+h4
+{
+    font-family: 'Righteous', cursive, Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 350%;
+    color: rgb(0, 0, 0);
+    margin-top: 6%;
+    margin-bottom: -5%;
+}
+
+
+
+/********* HEADER ********/
+
+.titre
+{
+    font-family: 'Righteous', cursive, Arial, Helvetica, sans-serif;
+    color: #342c58;
+    font-size: 300%;
+    margin-right: 40%;
+    margin-top: 0.5%;
+}
+
+
+
+/********* HEADER MENU *********/
+
+:root
+{
+    --hauteur-menu: 80px;
+}
+
+
+nav
+{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+nav > ul
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: var(--hauteur-menu);
+}
+
+nav ul
+{
+    list-style-type: none;
+}
+
+nav > ul > li
+{
+    font-size: 150%;
+    font-style: bold;
+    position: relative;
+    height: 100%;
+    margin-left: 12%;
+}
+
+nav > ul > li > a
+{
+    position: absolute;
+    top: 30%;
+    right: 60%;
+}
+
+li a
+{
+    text-decoration: none;
+    color: #342c58;
+}
+
+.droll > a:after
+{
+    content: '❯';
+    font-size: 15px;
+    margin-left: 10%;
+}
+
+.undroll
+{
+    margin-top: var(--hauteur-menu);
+    width: 150%;
+    background-color: #ccccccb7;
+    border-radius: 2px;
+    overflow: hidden;
+    max-height: 0;
+    margin-left: -50%;
+}
+
+.undroll > li > a 
+{
+    height: 60px;
+    padding-lefT: 6%;
+    padding-right: 10%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+
+nav > ul > li:hover > a
+{
+    color: #8275be;
+}
+
+.undroll > li:hover 
+{
+    background-color: #ccc0ff49;
+}
+
+.undroll > li:hover > a
+{
+    color: #8275be;
+}
+
+@keyframes appearundroll
+{
+0%  {
+        border-top: 3px solid #7367a8;
+    }
+
+100%{
+        max-height: 50em;
+        border-top: 3px solid #7367a8;
+    }
+}
+
+.droll:hover > .undroll
+{
+    animation: appearundroll 1s forwards;
+}
+
+
+/********** MAIN INDEX.PHP **********/ 
+
+
+section
+{
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
+
+.alb
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.alb a 
+{
+    text-decoration: none;
+    color:rgb(223, 223, 223)
+}
+
+
+
+/****** Banniere INDEX.PHP ******/
+
+.cont-ban
+{
+    position: relative;
+    padding: 0;
+    width: 1350px;
+    height: 383px;
+    display: block;
+    overflow: hidden;
+    margin-top: 6%;   
+}
+
+.c-txt-ban
+{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 200%;
+    background-color: rgba(36, 33, 33, 0.582);
+    color: white;
+    border: hidden;
+    width: 1350px;
+    height: 383px;
+    text-align: center;
+}
+
+.cont-ban .c-txt-ban
+{
+    opacity: 1;
+}
+
+.intro
+{
+    margin: 8%;
+    text-align: center;
+    font-size: 110%;
+    font-style: bold;
+    font-family: 'Righteous', cursive, Arial, Helvetica, sans-serif;
+    color: rgba(185, 185, 185, 0.89);
+}
+
+
+/**** album  *****/
+
+span
+{
+    font-style: bold;
+    margin-bottom: 3%;
+}
+
+.cont-alb
+{
+    position: relative;
+    padding: 0;
+    width: 400px;
+    height: 400px;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.c-txt-alb
+{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 200%;
+    background-color: rgba(36, 33, 33, 0.582);
+    color: white;
+    border: hidden;
+    width: 400px;
+    height: 400px;
+    -webkit-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+    text-align: center;
+}
+
+.cont-alb .c-txt-alb:hover
+{
+    opacity: 1;
+}
+
+.cont-alb .c-txt-alb .txtalb
+{
+    height: 0;
+    opacity: 1;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+}
+
+.cont-alb .c-txt-alb:hover .txtalb
+{
+    opacity: 1;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+}
+
+.txtalb
+{
+    margin-top: 35%;
+    margin-right: 5%;
+}
+
+.link-name:hover
+{
+    cursor: pointer;
+    color: #000000;
+    text-decoration: overline;
+    font-size: larger;
+}
+
+.link-alb:hover
+{
+    cursor: pointer;
+    color: #000000;
+    font-size: larger;
+}
+
+
+
+/******* LIVRE-OR.PHP ********/
+
+.com
+{
+    text-align: left;
+    margin-left: 15%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+
+.add
+{
+    margin-top: 8%;
+}
+
+.comment
+{
+    font-size: 150%;
+}
+
+h5
+{
+    font-size: 80%;
+}
+
+.log
+{
+    color: #342c58;
+    font-family: 'Quicksand', sans-serif, Arial, Helvetica, sans-serif;
+    font-size: 180%;
+}
+
+.date
+{
+    text-align: center;
+    margin: 5%;
+}
+
+
+
+/******** PROFIL.PHP ******/
+
+.profil
+{
+    color: rgb(161, 161, 161);
+    margin-bottom: 8%; 
+    text-align: center;
+}
+
+.box444
+{
+    
+    border-radius: 20px;
+    padding: 20px 35px 30px 35px;
+    margin-top: 5%;
+    margin-left: 35%;
+    width: 360px;
+    color: rgb(0, 0, 0);
+}
+
+h1.box-title444 
+{
+    color: #575757;
+    font-weight: 300;
+    padding: 15px 25px;
+    line-height: 30px;
+    font-size: 180%;
+    text-align: center;
+    margin: -27px -26px 26px;
+    margin-top: 12%;
+}
+
+
+
+/********** FORMULAIRES ALL PAGES **********/
+
+.form-label
+{
+    font-size: 150%;
+    margin: 7%;
+    color: #fdfdfd9d;
+}
+
+.form-text
+{
+    margin-top: 2%;
+    margin-bottom: 8%;
+    font-size: 0.720em;
+    color: #6c757d;
+}
+
+.form-control
+{
+    display: block;
+    width: 100%;
+    padding: 2%;
+    font-size: 0.9rem;
+    margin-top: 6%;
+    font-weight: 400;
+    line-height: 1.5;
+    color:#212529;
+    background-color:#fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.form-control[type=file]
+{
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.form-control::-webkit-file-upload-button
+{
+    padding: 2%;
+    -webkit-margin-end: .65rem;
+    margin-inline-end: .65rem;
+    color:#212529;
+    background-color:#d9dee6;
+    pointer-events: none;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border-inline-end-width: 1px;
+    border-radius: 5%;
+    margin-left: 0.1%;
+    -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+@media (prefers-reduced-motion:reduce)
+{
+    .form-control::-webkit-file-upload-button
+    {
+        -webkit-transition: none;
+        transition: none;
+    }
+}
+
+.form-control:hover::-webkit-file-upload-button
+{
+    background-color:#eec2bf;
+    color: rgb(0, 0, 0);
+    border: 2px solid #eec2bf;
+    border-radius: 4%;
+}
+
+h2
+{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-top: 6%;
+}
+
+.tab h1
+{
+    margin-bottom: 5%;
+    text-align: center;
+    color: rgb(161, 161, 161);
+}
+
+td
+{
+    text-align: center;
+    color: rgb(161, 161, 161);
+}
+
+.box
+{
+    
+    border-radius: 20px;
+    padding: 30px 35px 30px 35px;
+    
+    margin: 60px auto;
+    width: 360px;
+    color: rgb(0, 0, 0);
+}
+
+h1.box-logo a 
+{
+    text-decoration:none;
+}
+
+h1.box-title 
+{
+    color: #696969;
+    
+    font-weight: 300;
+    padding: 15px 25px;
+    line-height: 30px;
+    font-size: 180%;
+    text-align: center;
+    margin: -27px -26px 26px;
+    margin-top: 10%;
+}
+
+.box-button 
+{
+    border-radius: 7px;
+    background: #342c58;
+    text-align: center;
+    cursor: pointer;
+    font-size: 19px;
+    width: 100%;
+    height: 51px;
+    padding: 0;
+    color: #fff;
+    border: 0;
+    outline:0;
+}
+
+.box-button_com
+{
+    border-radius: 7px;
+    background: #342c58;
+    text-align: center;
+    cursor: pointer;
+    font-size: 19px;
+    width: 30%;
+    height: 51px;
+    margin-left: 35%;
+    margin-top: 5%;
+    color: #fff;
+    border: 0;
+    outline:0;
+}
+
+.box-register
+{
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 15%;
+}
+
+.box-register a
+{
+    text-decoration:none;
+    font-size: 100%;
+    color:#666;
+}
+
+.box-input 
+{
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 25px;
+    padding-left:10px;
+    border-radius: 5px;
+    width: 347px;
+    height: 50px;
+}
+
+.box-input:focus 
+{
+    outline: none;
+    border-color:#5c7186;
+}
+
+
+/******** INSCRIPTION.PHP ******/
+
+h6
+{
+   text-align: center;
+}
+
+
+
+/******* AFFICHAGE MESSAGES D'ALERTE *******/
+
+.sucess
+{
+    margin-top: 2%;
+    text-align: center;
+	color: rgba(66, 66, 66, 0.733);
+    font-size: 160%;
+    font-family: 'Roboto Mono', monospace, Arial, Helvetica, sans-serif;
+}
+
+.sucess2
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15%;
+    text-align: center;
+	color: rgb(66, 66, 66);
+    font-size: 150%;
+}
+
+p.errorMessage 
+{
+    color: #FFFFFF;
+}
+
+
+
+/********** FOOTER ********/
+
+#link
+{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 4%;
+    margin-bottom: 8%;
+    color: rgb(41, 41, 41);
+}
+
+#link > a
+{
+    text-decoration: none;
+    color: #342c58;
+}
+
+.twi 
+{
+    margin-left: 48%;
+    margin-top: -5%;
+    margin-bottom: 1%;
+}
